@@ -12,7 +12,17 @@ const typeDefs = `
     getBoolean: Boolean
     getID: ID
     getNumbers(numbers:[Int!]!): [Int]
+    getProduct: Product
   } 
+
+  type Product {
+    id: ID!
+    name: String!
+    price: Float!
+    description: String!
+    image:  String!
+    createdAt: String!
+  }
 `;
 
 // Get => Query
@@ -38,7 +48,16 @@ const resolvers = {
     getString: ()=> 'palabra',
     getBoolean: ()=> true,
     getID: ()=> '12121212121',
-    getNumbers: (_, args)=> args.numbers
+    getNumbers: (_, args)=> args.numbers,
+    getProduct: () => {
+      return {
+        id: '121212',
+        name: 'Product 1',
+        price: 120.12,
+        description: 'This is a product',
+        image: 'https://placeimg.com/640/480/tech',
+        createdAt: new Date().toISOString()
+      }}
   }
 }
 
