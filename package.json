@@ -28,6 +28,7 @@
     "@apollo/server": "^4.11.3",
     "@apollo/server-plugin-landing-page-graphql-playground": "^4.0.1",
     "@faker-js/faker": "7.4.0",
+    "@graphql-tools/load-files": "^7.0.1",
     "@hapi/boom": "10.0.0",
     "bcrypt": "5.0.1",
     "cors": "2.8.5",
